@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Code Editor</title>
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: #1e1e1e;
+      color: #ddd;
+    }
+
+    header {
+      padding: 10px;
+      background: #2d2d2d;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header h1 {
+      flex-basis: 100%;
+      margin: 0 0 5px 0;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    select, button {
+      padding: 5px 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    select { background: #3a3a3a; color: #ddd; }
+    button { background: #007acc; color: white; }
+    button:hover { background: #005a9e; }
+
+    #tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-left: auto;
+    }
+
+    .tab {
+      padding: 5px 10px;
+      border-radius: 4px;
+      background: #3a3a3a;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .tab.active { background: #007acc; }
+
+    main {
+      flex: 1;
+      display: flex;
+      gap: 5px;
+      padding: 5px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+
+    #editorContainer {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      resize: horizontal;
+      overflow: auto;
+      border: 1px solid #444;
+      border-radius: 4px;
+    }
+    .editorWrapper {
+  display: flex;
+  flex-direction: row;
+  background: #1e1e1e;
+  border-radius: 4px;
+  border: 1px solid #444;
+  overflow: hidden;
+}
+
+#lineNumbers {
+  background: #2d2d2d;
+  color: #888;
+  padding: 10px 5px;
+  text-align: right;
+  user-select: none;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+}
+
+#editor {
+  flex: 1;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  resize: none;
+  background: #1e1e1e;
+  color: #ddd;
+  outline: none;
+}
+
+    textarea {
+      flex: 1;
+      font-family: 'Fira Code', monospace;
+      font-size: 14px;
+      padding: 10px;
+      resize: none;
+      border-radius: 4px;
+      border: 1px solid #444;
+      background: #1e1e1e;
+      color: #ddd;
+    }
+
+    iframe {
+      flex: 1 1 300px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: white;
+    }
+
+    pre {
+      flex: 1 1 300px;
+      background: #1e1e1e;
+      color: #ddd;
+      padding: 10px;
+      overflow: auto;
+      border: 1px solid #444;
+      border-radius: 4px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      main { flex-direction: column; }
+      #editorContainer, iframe, pre { flex: 1 1 auto; min-height: 200px; }
+    }
+  </style>
+
+  <!-- Brython for Python support -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.1/brython.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.1/brython_stdlib.js"></script>
+</head>
+<body onload="brython()">
+
+  <header style="justify-content: start;">
+    <h1 >Code Editor</h1>
+    <label for="language">Language:</label>
+    <select id="language">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+      <option value="python">Python</option>
+    </select>
+    <button id="runBtn">Run Code</button>
+    <div id="tabs"></div>
+  </header>
+
+  <main>
+    <div id="editorContainer">
+  <div class="editorWrapper">
+    <div id="lineNumbers">1</div>
+    <textarea id="editor" placeholder="Write your code here..."></textarea>
+  </div>
+  <pre><code id="highlightedCode" class="language-html"></code></pre>
+</div>
+
+    <iframe id="output"></iframe>
+    <pre id="consoleOutput"><code class="language-js"></code></pre>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+  <script src="script.js" type="module"></script>
+</body>
+</html>
