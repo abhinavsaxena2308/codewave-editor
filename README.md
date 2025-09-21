@@ -36,5 +36,5 @@ project-root:
 1. Clone the repository:
 
 ```bash
-git clone <your-repo-url>
-cd <repo-folder>
+git clone https://github.com/abhinavsaxena2308/codewave-editor.git
+cd codewave-editor
