@@ -130,3 +130,28 @@ footer {
         font-size: 1.4rem;
     }
 }
+
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #333;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #555;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+.btn-github:hover {
+    background-color: #24292e;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #4cafef;
+}
+.github-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* makes SVG white for dark theme */
+}
