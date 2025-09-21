@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeWave</title>
+
+<!-- Skulpt for Python -->
+<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>CodeWave</header>
+
+<div class="controls">
+    <div class="editor-tabs">
+        <div class="tab-header active" data-lang="html">HTML</div>
+        <div class="tab-header" data-lang="css">CSS</div>
+        <div class="tab-header" data-lang="js">JavaScript</div>
+        <div class="tab-header" data-lang="python">Python</div>
+    </div>
+    <div>
+        <button onclick="runCode()">Run ▶</button>
+        <button onclick="downloadCode()">💾 Save</button>
+        <button onclick="toggleTheme()">🌙/☀️</button>
+        <button onclick="location.href = 'index.html';">Back to home</button>
+    </div>
+</div>
+
+<div class="editor-container">
+    <div class="tab">
+        <textarea id="editor" placeholder="Write your code here..."></textarea>
+    </div>
+    <div class="tab">
+        <pre id="output"></pre>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

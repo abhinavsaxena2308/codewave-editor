@@ -1,0 +1,132 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Courier New', monospace;
+    overflow-x: hidden;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+/* Particles.js */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero,
+.features,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Section Text - no glow now */
+.glow,
+.glow-text {
+    text-shadow: none;
+}
+
+.glow {
+    font-size: 4.5rem;
+    color: #4cafef;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.glow-text {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Get Started button - keep glow */
+.btn-start {
+    padding: 18px 45px;
+    font-size: 1.3rem;
+    background: #4cafef;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #4cafef, 0 0 20px #00b0ff;
+    transition: 0.3s;
+}
+
+.btn-start:hover {
+    background: #00b0ff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #4cafef, 0 0 25px #00b0ff;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 60px 20px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.feature-card h2 {
+    margin-bottom: 15px;
+    color: #4cafef;
+    text-shadow: none;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    background: #0a0a0a;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+    }
+}
