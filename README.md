@@ -22,8 +22,8 @@ CodeWave is a modern, web-based code editor that supports **HTML, CSS, JavaScrip
 ## 🎨 How to Run Locally
 1. Clone the repository:
 ```yaml
-git clone <your-repo-url>
-cd <repo-folder>
+git clone https://github.com/abhinavsaxena2308/codewave-editor.git
+cd codewave-editor
 ```
 2. Open index.html in your browser.
 3. Click Get Started to navigate to the editor page.
