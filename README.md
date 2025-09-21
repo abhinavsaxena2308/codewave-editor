@@ -1,5 +1,8 @@
 # CodeWave - Multi-language Online Code Editor
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](https://code-wave-editor.netlify.app/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 CodeWave is a modern, web-based code editor that supports **HTML, CSS, JavaScript, and Python**. It features a responsive design, dark/light themes, live preview for HTML/CSS/JS, and an interactive Python environment powered by Skulpt. The project also includes a **dark landing page with particle animations** and a glowing “Get Started” button.
 
 ---
@@ -16,25 +19,12 @@ CodeWave is a modern, web-based code editor that supports **HTML, CSS, JavaScrip
 
 ---
 
-## 🎨 Project Structure
-
-project-root:
-  - index.html           # Landing page
-  - editor.html          # Code editor page
-  - style.css            # Editor page styles
-  - landing-style.css    # Landing page styles
-  - script.js            # Editor JavaScript logic
-  - landing-script.js    # Landing page particles.js logic
-  - README.md            # Project documentation
-
-
-
----
-
-## ⚡ How to Run Locally
-
+## 🎨 How to Run Locally
 1. Clone the repository:
+```yaml
+git clone <your-repo-url>
+cd <repo-folder>
+```
+2. Open index.html in your browser.
+3. Click Get Started to navigate to the editor page.
 
-```bash
-git clone https://github.com/abhinavsaxena2308/codewave-editor.git
-cd codewave-editor
